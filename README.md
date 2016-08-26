@@ -1,2 +1,27 @@
-# hubot-matrix-docker
-Dockered hubot for Matrix.org server.
+# Hubot adapter for matrix
+
+## Quick how-to
+
+### Prerequisties
+
+- Account created for the bot in a matrix server (login & password are required)
+- Docker installed
+
+
+### Deploy the bot
+Build and instantiate the bot.
+
+```
+git clone <this repo>
+cd hubot-matrix-docker
+docker built -t nic0d/hubot-matrix .
+docker run -it --rm -e HUBOT_MATRIX_PASSWORD=<bot-password> --e HUBOT_MATRIX_HOST_SERVER=<server-url> --name hubot-matrix -e BOT_NAME=<bot-name> nic0d/hubot-matrix
+```
+### Test the bot
+
+- connect in the matrix Server with a regular user Account
+- invite the bot in a room
+- chat with the bot (<bot-name> help may helps)
+
+Optional parameter:
+ -e HUBOT_LOG_LEVEL=debug
