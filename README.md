@@ -13,7 +13,7 @@
 Build the bot Docker image.
 
 ```
-git clone <this repo>
+git clone https://github.com/nic0d/hubot-matrix-docker.git
 cd hubot-matrix-docker
 docker built -t nic0d/hubot-matrix-docker .
 ```
